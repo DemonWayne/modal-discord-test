@@ -1,10 +1,10 @@
 'use strict';
 
-const { Command } = require('@sapphire/framework');
-const { Modal, MessageActionRow, TextInputComponent } = require('discord.js');
+import { Command } from '@sapphire/framework';
+import { Modal, MessageActionRow, TextInputComponent, ModalActionRowComponent } from 'discord.js';
 
 module.exports = class extends Command {
-  constructor(context, options) {
+  constructor(context: Command.Context, options?: Command.Options) {
     super(context, {
       ...options,
       name: 'test',
@@ -15,16 +15,12 @@ module.exports = class extends Command {
     });
   }
 
-  messageRun(message) {
-    message.reply('Turn on Slash Commands or reboot.');
-  }
-
-  async chatInputRun(interaction) {
+  public async chatInputRun(interaction: Command.ChatInputInteraction) {
     const modal = new Modal()
       .setTitle('test')
       .setCustomId('test_modal')
       .addComponents(
-        new MessageActionRow().addComponents(
+        new MessageActionRow<ModalActionRowComponent>().addComponents(
           new TextInputComponent()
             .setCustomId('input')
             .setLabel('Text')
