@@ -1,0 +1,32 @@
+{
+  "name": "modal-discord-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DemonWayne/modal-discord-test.git"
+  },
+  "author": "DemonWayne",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/DemonWayne/modal-discord-test/issues"
+  },
+  "homepage": "https://github.com/DemonWayne/modal-discord-test#readme",
+  "dependencies": {
+    "@sapphire/framework": "^3.0.0-next.1f76366.0",
+    "discord.js": "^13.7.0",
+    "dotenv": "^16.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.16",
+    "prettier": "^2.6.2"
+  }
+}

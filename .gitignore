@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Useless package-lock
+package-lock.json
