@@ -7,6 +7,6 @@ module.exports = class extends Listener {
   run(interaction: Interaction) {
     if (!interaction.isModalSubmit()) return;
     const text = interaction.fields.getTextInputValue('input');
-    interaction.reply(`${text}`);
+    interaction.reply(text);
   }
 };
