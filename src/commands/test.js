@@ -7,16 +7,11 @@ module.exports = class extends Command {
   constructor(context, options) {
     super(context, {
       ...options,
-      name: 'test',
       description: 'Test command',
       chatInputCommand: {
         register: true,
       },
     });
-  }
-
-  messageRun(message) {
-    message.reply('Turn on Slash Commands or reboot.');
   }
 
   async chatInputRun(interaction) {
